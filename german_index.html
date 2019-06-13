@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>IoT NFC Scheduler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body onload="getDate(), getDay(), getTime(), getDate2()">
+  <div class="header">
+    <div class="row">
+      <div class="column"><h2>You can use your UDS-Card to get additional information!</h2></div>
+      <div class="column2">
+    <h1>Willkommen am</h1>
+    <img src="DFKI_Logo.jpg" alt="DFKI Logo" width="" height="50">
+    <h4>Es ist der <span id="date"></span>, <span id="time"></span>.</h4>
+  </div>
+  <div class="column">
+      <div class="languages">
+          <a href="german_index.html"><img src="german.png" width="80"  title="German" alt="German"></a>
+          <a href="french_index.html"><img src="french.png" width="40" title="French" alt="French"></a>
+          <a href="index.html"><img src="english.png" width="40"  title="English" alt="English"></a>
+      </div>
+  </div>
+  </div>
+</div>
+
+  <div class="row">
+    <div class="column">
+      <h2>
+        <p><strong><span id="day"></span>: <span id="date2"></span></strong>
+      </h2>
+      </p>
+      <div class="card-group" id="accordion">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              10:15 - 11:15 Presentation
+            </h3>
+          </div>
+          <div class="panel-body">
+              <div class="addInfo"><strong>Who:</strong> xxx <strong>When:</strong> xxx</div>
+            </div>
+          </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              12:15 - 13:45 Talk
+            </h3>
+          </div>
+          <div class="panel-body">
+              <div class="addInfo"><strong>Who:</strong> xxx <strong>When:</strong> xxx</div>
+            </div>
+          </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              15:15 - 17:15 Meeting
+            </h3>
+          </div>
+          <div class="panel-body">
+              <div class="addInfo"><strong>Who:</strong> xxx <strong>When:</strong> xxx</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+    <div class="column2">
+      <h2>
+        <p></p>
+      </h2>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p><img src="UDS_Logo.png" alt="UDS Logo" width="" height="200"></p>
+    </div>
+
+
+
+    <div class="column text-center">
+      <h2>
+        <p><strong>Recent Publications</strong></p>
+      </h2>
+      <div class="panel-group" id="accordion2">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+                INTEGRATING HETEROGENEOUS SOURCES FOR PREDICTING QUESTION TEMPORAL ANCHORS ACROSS YAHOO! ANSWERS <br>
+            </h3>
+          </div>
+            <div class="panel-body">
+                <div class="addInfo"><strong>Authors:</strong>Alejandro Figueroa, Carlos Gómez-Pantoja, Günter Neumann</div>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+                VIRTUAL-REALITY-SHOPPING UND ONLINESHOPPING IM VERGLEICH HINSICHTLICH USABILITY UND EINPRÄGSAMKEIT
+            </h3>
+          </div>
+          <div class="panel-body">
+              <div class="addInfo"><strong>Authors:</strong>Alexander Hart, Markus Langer, Marco Speicher, Cornelius J König</div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+                ADVANCED SIMILARITY MEASURES USING WORD EMBEDDINGS AND SIAMESE NETWORKS IN CBR
+            </h3>
+          </div>
+          
+            <div class="panel-body">
+              <div class="addInfo"><strong>Authors:</strong>Kareem Amin, George Lancaster, Stelios Kapetanakis, Klaus-Dieter Althoff, Andreas Dengel, Miltos Petridis</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <footer class="container-fluid bg-4 text-center">
+    <h2>You can use your UDS-Card to get additional information! <br><br></h2>
+
+  </footer>
+
+
+
+</body>
+
+</html>

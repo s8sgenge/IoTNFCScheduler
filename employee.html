@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<html lang="en">
+
+<head>
+  <title>IoT NFC Scheduler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+  <body onload="getDate(), getDay(), getTime(), getDate2()"></body>
+
+  <div class="header">
+    <h1>IoT NFC Scheduler</h1>
+    <img src="DFKI_Logo.jpg" alt="DFKI Logo" width="" height="50">
+    <p>Welcome "Employee", it's the <span id="date"></span>, <span id="time"></span>.</p>
+    </p>
+  </div>
+
+
+
+  <div class="row">
+    <div class="column text-center">
+      <h2>
+        <p><span id="day"></span>: <span id="date2"></span>
+      </h2>
+      </p>
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">10:15 - 11:15 Presentation</a>
+            </h3>
+          </div>
+          <div id="collapse1" class="panel-collapse collapse">
+            <div class="panel-body">More Info</div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">12:15 - 13:45 Talk</a>
+            </h3>
+          </div>
+          <div id="collapse2" class="panel-collapse collapse">
+            <div class="panel-body">More Info</div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">15:15 - 17:15 Meeting</a>
+            </h3>
+          </div>
+          <div id="collapse3" class="panel-collapse collapse">
+            <div class="panel-body">More Info</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <h2>
+        <p>Today's Schedule</p>
+      </h2>
+      <div class="panel-group" id="accordion1">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1_1">09:00 - 11:00 Meeting with
+                co-worker</a>
+            </h3>
+          </div>
+          <div id="collapse1_1" class="panel-collapse collapse">
+            <div class="panel-body">More Info</div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1_2">13:30 - 14:00 Meeting with PhD
+                Student</a>
+            </h3>
+          </div>
+          <div id="collapse1_2" class="panel-collapse collapse">
+            <div class="panel-body">More Info</div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion1" href="#collapse1_3">15:15 - 16:15 Perspektiven der
+                Informatik</a>
+            </h3>
+          </div>
+          <div id="collapse1_3" class="panel-collapse collapse">
+            <div class="panel-body">in E2.5 HS01</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class="column text-center">
+      <h2>
+        <p>Recent Publications</p>
+      </h2>
+      <div class="panel-group" id="accordion2">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2_1">INTEGRATING HETEROGENEOUS SOURCES
+                ...</a>
+            </h3>
+          </div>
+          <div id="collapse2_1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <strong>Abstract:</strong> Modern Community Question Answering (CQA) web forums provide the possibility to
+              browse their archives using question-like search queries as in Information Retrieval (IR) systems.
+              Although these traditional IR methods have become very successful at fetching semantically related
+              questions, they typically leave unconsidered their temporal relations. That is to say, a group of
+              questions may be asked more often during specific recurring time lines despite being semantically
+              ...<br>
+
+              <a
+                href="https://www.dfki.de/web/forschung/projekte-publikationen/publikationen/publikation/10150/">read further</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2_2">VIRTUAL-REALITY-SHOPPING
+                UND ...</a>
+            </h3>
+          </div>
+          <div id="collapse2_2" class="panel-collapse collapse">
+            <div class="panel-body"><strong>Abstract:</strong> Virtual-Reality-Shopping (VRS) wird von Unternehmen
+              zumeist verwendet um Innovativität zu zeigen. Die wirklichen Potentiale von VRS wurden allerdings bisher
+              kaum systematisch untersucht. Diese Studie betrachtete daher Eigenschaften einer VR Einkaufsumgebung im
+              Vergleich zu einem prototypischen Onlineshop. Die Fragestellung wurde mit einem messwiederholten und
+              ausbalancierten einfaktoriellen Design untersucht, bei dem die Versuchspersonen nacheinander in beiden
+              ...<br>
+              <a
+                href="https://www.dfki.de/web/forschung/projekte-publikationen/publikationen/publikation/10422/">read further</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion2" href="#collapse2_3">ADVANCED
+                SIMILARITY MEASURES USING ...</a>
+            </h3>
+          </div>
+          <div id="collapse2_3" class="panel-collapse collapse">
+            <div class="panel-body"><strong>Abstract:</strong> Automatic fuzzy text processing, context extraction and
+              disambiguation are three challenging research areas with high relevance to complex business domains.
+              Business knowledge can be found in plain text message exchanges, emails, support tickets, internal chat
+              messengers and other volatile means, making the decoding of text-based domain knowledge a challenging
+              task. Traditional natural language pro- cessing approaches focus on a comprehensive representation of
+             ...<br>
+              <a
+                href="https://www.dfki.de/web/forschung/projekte-publikationen/publikationen/publikation/10304/">read further</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="container-fluid bg-4 text-center">
+    <a href="index.html" class="btn btn-info btn">
+      <span class="glyphicon glyphicon-log-out"></span> Log out
+    </a>
+  </footer>
+
+</body>
+</html>
