@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+<script src="jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>IoT NFC Scheduler</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body onload="getDate(), getDay(), getTime(), getDate2()">
+  <div class="header">
+    <div class="row">
+      <div class="col-4">
+      </div>
+      <div class="col-4">
+        <h1 class="lang" key="welcome">Welcome at the</h1>
+        <img src="images/DFKI_Logo.jpg" alt="DFKI Logo" width="" height="75">
+        <h4 class="lang" key="date">It's the </h4> <h4><span id="date"></span>, <span id="time"></span>.</h4>
+      </div>
+      <div class="col-4" style="padding: 50px">
+        <div class="languages">
+          <input type="image" onclick="resizeDE()" value="Click" class="translate" id="de" style="height:80px" src="images/german.png" />
+          <input type="image" onclick="resizeFR()" value="Click" class="translate" id="fr" style="height:80px" src="images/french.png" />
+          <input type="image" onclick="resizeEN()" value="Click" class="translate" id="en" style="height:100px" src="images/english.png" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-5" style="padding-left: 40px">
+      <h2 class="card-title">
+        <p><strong><span class="lang" key="day" id="day"></span>: <span id="date2"></span></strong>
+      </h2>
+      </p>
+
+      <div class="card">
+        <div class="card-header bg-info text-white">
+          <h4 class="card-title">
+            10:15 - 11:15 Presentation
+          </h4>
+        </div>
+        <div class="card-body">
+          <div class="addInfo"><strong>Who:</strong> <span id="Who"></span> <strong>When:</strong> <span
+              id="When"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <h4 class="card-tile">
+            12:15 - 13:45 Talk
+          </h4>
+        </div>
+        <div class="card-body">
+          <div class="addInfo"><strong>Who:</strong> xxx <strong>When:</strong> xxx
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h4 class="card-title">
+            15:15 - 17:15 Meeting
+          </h4>
+        </div>
+        <div class="card-body">
+          <div class="addInfo"><strong>Who:</strong> xxx <strong>When:</strong> xxx
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+    <div class="col-2">
+      <br>
+      <br>
+      <br>
+      <p><img src="images/UDS_Logo.png" alt="UDS Logo" class="imgCenter"></p>
+      <p>
+        <h2 class ="lang" key="useCard" id="tipp">You can use your UDS-Card to get additional information!</h2>
+      </p>
+    </div>
+
+
+
+    <div class="col-5" style="padding-right: 40px">
+      <h2>
+        <p class="lang" key="publications"><strong>Recent Publications</strong></p>
+      </h2>
+
+      <div class="card">
+        <div class="card-header bg-info text-white">
+          <h4 class="card-title">
+            INTEGRATING HETEROGENEOUS SOURCES FOR PREDICTING QUESTION TEMPORAL ANCHORS ACROSS YAHOO! ANSWERS <br>
+          </h4>
+        </div>
+        <div class="card-body">
+          <div class="addInfo"><strong>Authors: </strong>Alejandro Figueroa, Carlos Gómez-Pantoja, Günter Neumann</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header bg-secondary text-white">
+          <h4 class="card-title">
+            VIRTUAL-REALITY-SHOPPING UND ONLINESHOPPING IM VERGLEICH HINSICHTLICH USABILITY UND EINPRÄGSAMKEIT
+          </h4>
+        </div>
+        <div class="card-body">
+          <div class="addInfo"><strong>Authors: </strong>Alexander Hart, Markus Langer, Marco Speicher, Cornelius J König
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header bg-dark text-white">
+          <h4 class="card-title">
+            ADVANCED SIMILARITY MEASURES USING WORD EMBEDDINGS AND SIAMESE NETWORKS IN CBR
+          </h4>
+        </div>
+
+        <div class="card-body">
+          <div class="addInfo"><strong>Authors: </strong>Kareem Amin, George Lancaster, Stelios Kapetanakis, Klaus-Dieter
+            Althoff, Andreas Dengel, Miltos Petridis</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
