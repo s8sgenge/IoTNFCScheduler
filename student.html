@@ -15,14 +15,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body onload="getDate(), getDay(), getTime(), getDate2()">
+<script>
+    let scheduleData = [["publicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["publicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["publicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
+    let publicationsData = [["studentSchedule", "12:15 - 13:45 Interactive Systems ", "By: Prof. Krüger In: E1.3 HS01"], ["studentSchedule", "14:15 - 15:45 Informationssysteme", "By: Prof. Dietrich In: GHH"], ["studentSchedule", "16:15 - 17:45 Nebenläufige Programmierung", "By: Prof. Hermanns In: E1.3 HS02"]];
+  </script>
+
+<body onload="getDate(), getDay(), getTime(), getDate2(),buildSite(scheduleData, publicationsData)">
   <div class="header">
     <div class="row">
       <div class="col-4">
       </div>
       <div class="col-4">
         <h1 class="lang" key="welcome">Welcome "Student"</h1>
-        <img src="images/DFKI_Logo.jpg" alt="DFKI Logo" width="" height="75">
+        <img src="images/DFKI_Logo.png" alt="DFKI Logo" width="" height="75">
         <h4 class="lang" key="date">It's the </h4> <h4><span id="date"></span>, <span id="time"></span>.</h4>
       </div>
       <div class="col-4" style="padding: 50px">
@@ -36,89 +41,25 @@
   </div>
 
   <div class="row">
-    <div class="col-6" style="padding-left: 40px">
-      <h2 class="card-title">
-        <p><strong><span class="lang" key="day" id="day"></span>: <span id="date2"></span></strong>
-      </h2>
-      </p>
-
-      <div class="card">
-        <div class="card-header bg-info text-white">
-          <h4 class="card-title">
-            10:15 - 11:15 Presentation
-          </h4>
-        </div>
-        <div class="card-body">
-          <div class="addInfo"><strong>Who:</strong> <span id="Who"></span> <strong>When:</strong> <span
-              id="When"></span>
-          </div>
+      <!--Left column: Public Schedule-->
+      <div class="col-6" style="padding-left: 40px">
+        <h2 class="card-title">
+          <p><strong><span id="day"></span>: <span id="date2"></span></strong>
+        </h2>
+        </p>
+        <div id="publicSchedule">
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-header bg-secondary text-white">
-          <h4 class="card-tile">
-            12:15 - 13:45 Talk
-          </h4>
-        </div>
-        <div class="card-body">
-          <div class="addInfo"><strong>Who:</strong> xxx <strong>When:</strong> xxx
-          </div>
-        </div>
-      </div>
 
-      <div class="card">
-        <div class="card-header bg-dark text-white">
-          <h4 class="card-title">
-            15:15 - 17:15 Meeting
-          </h4>
-        </div>
-        <div class="card-body">
-          <div class="addInfo"><strong>Who:</strong> xxx <strong>When:</strong> xxx
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
+      <!--Right column: Student Schedule-->
     <div class="col-6" style="padding-right: 40px">
       <h2>
-        <p class="lang" key="publications"><strong>Today's lectures</strong></p>
+        <p class="lang" key="studentSchedule"><strong>Today's lectures</strong></p>
       </h2>
 
-      <div class="card">
-        <div class="card-header bg-info text-white">
-          <h4 class="card-title">
-              12:15 - 13:45 Interactive Systems <br>
-          </h4>
+      <div id="studentSchedule">
         </div>
-        <div class="card-body">
-          <div class="addInfo"><strong>By: </strong>Prof. Krüger <strong>In: </strong>E1.3 HS01</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-header bg-secondary text-white">
-          <h4 class="card-title">
-              14:15 - 15:45 Informationssysteme
-          </h4>
-        </div>
-        <div class="card-body">
-            <div class="addInfo"><strong>By: </strong>Prof. Dietrich <strong>In: </strong>GHH</div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header bg-dark text-white">
-          <h4 class="card-title">
-            16:15 - 17:45 Nebenläufige Programmierung
-          </h4>
-        </div>
-
-        <div class="card-body">
-            <div class="addInfo"><strong>By: </strong>Prof. Hermanns <strong>In: </strong>E1.3 HS02</div>
-        </div>
-      </div>
     </div>
   </div>
 

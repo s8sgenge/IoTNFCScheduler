@@ -62,7 +62,7 @@ function addCard(id, title, description, n) {
       break;
   }
 
-  if(id == "recentPublications"){
+  if (id == "recentPublications") {
     description = "Authors: " + description;
   }
 
@@ -144,17 +144,23 @@ let arrLang = {
     'date': 'It\'s the',
     'publications': 'Recent Publications',
     'useCard': 'You can use your UDS-Card to get additional information!',
+    'employeeSchedule': 'Today\'s schedule',
+    'studentSchedule': 'Today\'s lectures'
   },
   'de': {
     'welcome': 'Willkommen am',
     'date': 'Es ist der',
     'publications': 'Aktuelle Veröffentlichungen',
     'useCard': 'Mit Ihrer UDS-Karte können Sie zusätzliche Informationen erhalten!',
+    'employeeSchedule': 'Heutiger Tagesablauf',
+    'studentSchedule': 'Heutige Vorlesungen'
   },
   'fr': {
     'welcome': 'Bienvenue à',
     'date': 'C\'est le',
     'publications': 'Publications récentes',
     'useCard': 'Vous pouvez utiliser votre UDS-Card pour obtenir des informations supplémentaires!',
+    'employeeSchedule': 'Horaire actuel',
+    'studentSchedule': 'Cours d\'aujourd\'hui'
   }
 };
