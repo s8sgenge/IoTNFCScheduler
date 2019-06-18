@@ -16,9 +16,9 @@
 </head>
 
 <script>
-    let scheduleData = [["publicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["publicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["publicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
-    let publicationsData = [["employeeSchedule", "10:00 - 13:00 Artificial Intelligence Conference ", "By: Prof. Mustermann In: Conference room 7"], ["employeeSchedule", "14:15 - 15:15 Meeting with PhD Student", "With: Max Mustermann In: My office"], ["employeeSchedule", "17:00 Project Deadline", "Description: Interactive Systems: students must hand in project till 17:00"]];
-  </script>
+  let scheduleData = [["publicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["publicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["publicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
+  let publicationsData = [["employeeSchedule", "10:00 - 13:00 Artificial Intelligence Conference ", "By: Prof. Mustermann In: Conference room 7"], ["employeeSchedule", "14:15 - 15:15 Meeting with PhD Student", "With: Max Mustermann In: My office"], ["employeeSchedule", "17:00 Project Deadline", "Description: Interactive Systems: students must hand in project till 17:00"]];
+</script>
 
 <body onload="getDate(), getDay(), getTime(), getDate2(),buildSite(scheduleData, publicationsData)">
   <div class="header">
@@ -59,10 +59,10 @@
     <!--Right column: Employee Schedule-->
     <div class="col-6" style="padding-right: 40px">
       <h2>
-        <p class="lang" key="employeeSchedule"><strong>Today's schedule</strong></p>
+        <p><strong class="lang" key="employeeSchedule">Today's schedule</strong></p>
       </h2>
       <div id="employeeSchedule">
-        </div>
+      </div>
     </div>
   </div>
 

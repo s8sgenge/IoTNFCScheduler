@@ -63,7 +63,7 @@ function addCard(id, title, description, n) {
   }
 
   if (id == "recentPublications") {
-    description = "Authors: " + description;
+    description = "Authors: ".bold() + description;
   }
 
   let cardTitle = document.createElement("h4");
