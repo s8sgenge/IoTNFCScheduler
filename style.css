@@ -8,6 +8,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   padding: 1px;
+  background-color: #ffffff;
 }
 
 h2 {
@@ -24,7 +25,7 @@ h2 {
 /* Style the header */
 .header {
   margin: 0px;
-  background-color: #f1f1f1;
+  background-color: #dfe6e9;
   padding: 1px;
   text-align: center;
 }
@@ -67,7 +68,7 @@ h2 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 110%;
 }
 
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
