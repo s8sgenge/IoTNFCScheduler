@@ -82,19 +82,29 @@ function addCard(id, title, description, n) {
 }
 
 function resizeDE() {
-  de.style.height = "100px";
-  fr.style.height = "80px";
-  en.style.height = "80px";
+  let france = document.getElementById("fr");
+  france.setAttribute("style","outline:none;height:80px;");
+  let english = document.getElementById("en");
+  english.setAttribute("style", "outline:none;height:80px;");
+  let german = document.getElementById("de");
+  german.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
 }
 function resizeFR() {
-  de.style.height = "80px";
-  fr.style.height = "100px";
-  en.style.height = "80px";
+  let france = document.getElementById("fr");
+  france.setAttribute("style", "outline:none;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
+  let english = document.getElementById("en");
+  english.setAttribute("style", "outline:none;height:80px;");
+  let german = document.getElementById("de");
+  german.setAttribute("style", "outline:none;height:80px;");
 }
+
 function resizeEN() {
-  de.style.height = "80px";
-  fr.style.height = "80px";
-  en.style.height = "100px";
+  let france = document.getElementById("fr");
+  france.setAttribute("style", "outline:none;height:80px;");
+  let english = document.getElementById("en");
+  english.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
+  let german = document.getElementById("de");
+  german.setAttribute("style", "outline:none;height:80px;");
 }
 
 // JQuery website translation
