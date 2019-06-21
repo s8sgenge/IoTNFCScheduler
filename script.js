@@ -1,8 +1,3 @@
-function getDateTime() {
-  let dt = new Date();
-  document.getElementById("datetime").innerHTML = dt.toLocaleString();
-}
-
 function getTime() {
   let today = new Date();
   let h = today.getHours();
@@ -81,31 +76,32 @@ function addCard(id, title, description, n) {
   document.getElementById(id).appendChild(card);  // append card to id
 }
 
-function resizeDE() {
+function restyleLanguage(language) {
   let france = document.getElementById("fr");
-  france.setAttribute("style","outline:none;height:80px;");
   let english = document.getElementById("en");
-  english.setAttribute("style", "outline:none;height:80px;");
   let german = document.getElementById("de");
-  german.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
-}
-function resizeFR() {
-  let france = document.getElementById("fr");
-  france.setAttribute("style", "outline:none;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
-  let english = document.getElementById("en");
-  english.setAttribute("style", "outline:none;height:80px;");
-  let german = document.getElementById("de");
-  german.setAttribute("style", "outline:none;height:80px;");
+  switch (language) {
+    case 'en':
+      france.setAttribute("style", "outline:none;height:80px;");
+      english.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
+      german.setAttribute("style", "outline:none;height:80px;");
+      break;
+
+    case 'de':
+      france.setAttribute("style", "outline:none;height:80px;");
+      english.setAttribute("style", "outline:none;height:80px;");
+      german.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
+      break;
+
+    case 'fr':
+      france.setAttribute("style", "outline:none;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
+      english.setAttribute("style", "outline:none;height:80px;");
+      german.setAttribute("style", "outline:none;height:80px;");
+      break;
+  }
 }
 
-function resizeEN() {
-  let france = document.getElementById("fr");
-  france.setAttribute("style", "outline:none;height:80px;");
-  let english = document.getElementById("en");
-  english.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
-  let german = document.getElementById("de");
-  german.setAttribute("style", "outline:none;height:80px;");
-}
+
 
 // JQuery website translation
 $(function () {
@@ -126,24 +122,16 @@ function buildSite(schedule, publications) {
   let tmp;
   for (let i = 0; i < schedule.length; i++) {
     tmp = i % 3;
-    console.log(tmp);
     id = schedule[i][0];
-    console.log(id);
     title = schedule[i][1];
-    console.log(title);
     description = schedule[i][2];
-    console.log(description);
     addCard(id, title, description, tmp);
   }
   for (let i = 0; i < publications.length; i++) {
     tmp = i % 3;
-    console.log(tmp);
     id = publications[i][0];
-    console.log(id);
     title = publications[i][1];
-    console.log(title);
     description = publications[i][2];
-    console.log(description);
     addCard(id, title, description, tmp);
   }
 }
