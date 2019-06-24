@@ -1,87 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<script src="script.js"></script>
-<script src="https://code.jquery.com/jquery-1.11.3.js" integrity="sha256-IGWuzKD7mwVnNY01LtXxq3L84Tm/RJtNCYBfXZw3Je0="
-  crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>IoT NFC Scheduler</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    let scheduleData = [["publicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["publicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["publicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
-    let publicationsData = [["recentPublications", "INTEGRATING HETEROGENEOUS SOURCES FOR PREDICTING QUESTION TEMPORAL ANCHORS ACROSS YAHOO! ANSWERS ", "Alejandro Figueroa, Carlos Gómez-Pantoja, Günter Neumann"], ["recentPublications", "VIRTUAL-REALITY-SHOPPING UND ONLINESHOPPING IM VERGLEICH HINSICHTLICH USABILITY UND EINPRÄGSAMKEIT", "Alexander Hart, Markus Langer, Marco Speicher, Cornelius J König"], ["recentPublications", "ADVANCED SIMILARITY MEASURES USING WORD EMBEDDINGS AND SIAMESE NETWORKS IN CBR", "Kareem Amin, George Lancaster, Stelios Kapetanakis, Klaus-Dieter Althoff, Andreas Dengel, Miltos Petridis"]];
-  </script>
+	<title>Involt</title>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height" />
+	<script src="cordova.js"></script>
+	<script src="settings.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/loader.css">
 </head>
 
+<body>
 
-<body onload="getDate(), getDay(), getTime(), getDate2(), buildSite(scheduleData, publicationsData)">
-  <div class="header">
-    <div class="row">
-      <div class="col-4">
-      </div>
-      <!--Welcome message, DFKI logo-->
-      <div class="col-4">
-        <h1 class="lang" key="welcome">Welcome at the</h1>
-        <img src="images/DFKI_Logo.png" alt="DFKI Logo" width="" height="75">
-        <h4 class="lang" key="date">It's the </h4>
-        <h4><span id="date"></span>, <span id="time"></span>.</h4>
-      </div>
-      <!--Language Selector-->
-      <div class="col-4" style="padding: 50px">
-        <div class="languages">
-          <input type="image" onclick="resizeDE()" value="Click" class="translate" id="de" style="outline:none;height:80px;outline:none;"
-            src="images/german.png" />
-          <input type="image" onclick="resizeFR()" value="Click" class="translate" id="fr" style="outline:none;height:80px;outline:none;"
-            src="images/french.png" />
-          <input type="image" onclick="resizeEN()" value="Click" class="translate" id="en" style="outline:none;height:100px;outline:none; filter: drop-shadow(0 0 0.75rem crimson);"
-            src="images/english.png" />
-        </div>
-      </div>
-    </div>
-  </div>
+	<!--
 
+		This document contains loader and handles the communication while layout is showed within iframe
 
-  <div class="row">
-    <!--Left column: Public Schedule-->
-    <div class="col-5" style="padding-left: 40px">
-      <h2 class="card-title lang">
-        <p><strong><span id="day"></span>: <span id="date2"></span></strong>
-      </h2>
-      </p>
-      <div id="publicSchedule">
-      </div>
-    </div>
+		There is no need of changing anything here. 
+
+		Use app.html as your homepage.
+
+	-->
+	
+	<div id="loader-bg">
+		<div id="loader">
+			<div id="loader-logo-bg">
+				<img src="img/logo.png" alt="" id="loader-logo">
+			</div>
+			<div id="loader-wrapper">
+				<p id="loader-refresh">Please select your device:</p>
+				<div id="loader-ports"></div>
+			</div>
+			<div id="button-wrapper">
+				<button id="loader-connect">Connect</button>
+				<p id="loader-resume">Continue previous connection</p>
+			</div>
+		</div>
+	</div>
 
 
-    <!--Mid column: UDS logo and text-->
-    <div class="col-2">
-      <br>
-      <br>
-      <br>
-      <p><img src="images/UDS_Logo.jpg" alt="UDS Logo" class="imgCenter"></p>
-      <p>
-        <h2 class="lang" key="useCard" id="tipp">You can use your UDS-Card to get additional information!</h2>
-      </p>
-    </div>
+	<iframe src="app.html" frameborder="0" name="involtApp"></iframe>
 
-    <!--Right column: Recent Publications-->
-    <div class="col-5" style="padding-right: 40px">
-      <h2>
-        <p><strong class="lang" key="publications">Recent Publications</strong></p>
-      </h2>
-      <div id="recentPublications">
-      </div>
-    </div>
-  </div>
-
-
+	<script src="core/involt.js"></script>
+	<script src="core/loader.js"></script>
+	
 </body>
 
 </html>
