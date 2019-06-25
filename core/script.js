@@ -76,12 +76,12 @@ function addCard(id, title, description, n) {
   document.getElementById(id).appendChild(card);  // append card to id
 }
 
- function restyleLanguage(value){
+function restyleLanguage(value){
   let france = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('fr')
   let english = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('en');
 	let german = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('de');
-	
-	switch (value) {
+  
+  switch (value) {
 	  //english
 	  case 0:
 		france.setAttribute("style", "outline:none;height:80px;");
@@ -108,7 +108,7 @@ function addCard(id, title, description, n) {
   $('.lang').each(function (index, element) {
     $(this).text(arrLang[language][$(this).attr('key')]);
   });
-	};
+};
 
 
 

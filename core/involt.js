@@ -367,7 +367,7 @@ involt.involtListenForPin[0] = function(index, value){
 
 //logout 
 involt.involtListenForPin[1] = function(index, value){
-	document.getElementsByName('involtApp')[0].contentWindow.location.href ="www/employee.html";
+	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/app.html";
 }
 
 
