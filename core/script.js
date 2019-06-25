@@ -87,41 +87,35 @@ function restyleLanguage(value){
 		france.setAttribute("style", "outline:none;height:80px;");
 		english.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
     german.setAttribute("style", "outline:none;height:80px;");
-    language = 'en';
+    lang = 'en';
 		break;
 	  //german
 	  case 1:
 		france.setAttribute("style", "outline:none;height:80px;");
 		english.setAttribute("style", "outline:none;height:80px;");
 		german.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
-    language = 'de';
+    lang = 'de';
     break;
 	  //french
 	  case 2:
 		france.setAttribute("style", "outline:none;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
 		english.setAttribute("style", "outline:none;height:80px;");
     german.setAttribute("style", "outline:none;height:80px;");
-    language = 'fr';
+    lang = 'fr';
 		break;
   }
-
-  $('.lang').each(function (index, element) {
-    $(this).text(arrLang[value][$(this).attr('key')]);
-  });
+  translate(lang);
 };
 
-
-
 // JQuery website translation
-$(function () {
-  $('.translate').click(function () {
-    let lang = $(this).attr('id');
-
-    $('.lang').each(function (index, element) {
-      $(this).text(arrLang[lang][$(this).attr('key')]);
-    });
+function translate(l) {
+  let lang = l;
+  let app = document.getElementsByName('involtApp')[0].contentWindow;
+  app.$('.lang').each(function (index, element) {
+    $(this).text(arrLang[lang][$(this).attr('key')]);
   });
-});
+}
+
 
 
 function buildSite(schedule, publications) {
