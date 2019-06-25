@@ -106,7 +106,7 @@ function addCard(id, title, description, n) {
   }
 
   $('.lang').each(function (index, element) {
-    $(this).text(arrLang[language][$(this).attr('key')]);
+    $(this).text(arrLang[value][$(this).attr('key')]);
   });
 	};
 
