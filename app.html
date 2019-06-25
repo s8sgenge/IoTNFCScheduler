@@ -10,7 +10,14 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="core/jquery/jquery-2.1.0.min.js"></script>
+  <script src="core/jquery/jquery.nouislider.min.js"></script>
+  <script src="core/jquery/jquery.knob.js"></script>
+  <script src="core/jquery/insQ.min.js"></script>
+  <script src="settings.js"></script>
+  <script src="core/bridge.js"></script>
+  <script src="core/framework.js"></script>
+  <link rel="stylesheet" type="text/css"  href="css/style.css">
   <title>IoT NFC Scheduler</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,10 +43,8 @@
       <!--Language Selector-->
       <div class="col-4" style="padding: 50px">
         <div class="languages">
-            <div class="ard show buttonLanguage">
           <input type="image" onclick="restyleLanguage('de')" value="Click" class="translate" id="de" style="outline:none;height:80px;outline:none;"
             src="img/german.png" />
-          </div>
           <input type="image" onclick="restyleLanguage('fr')" value="Click" class="translate" id="fr" style="outline:none;height:80px;outline:none;"
             src="img/french.png" />
           <input type="image" onclick="restyleLanguage('en')" value="Click" class="translate" id="en" style="outline:none;height:100px;outline:none; filter: drop-shadow(0 0 0.75rem crimson);"
@@ -82,7 +87,6 @@
       </div>
     </div>
   </div>
-
 
 </body>
 

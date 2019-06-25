@@ -17,7 +17,7 @@
 		Set loaderOnLaunch to false and skip loading screen on app launch. 
 		Remember to set default connection settings because it's not possible when app is running.
 	*/
-	var loaderOnLaunch = true;
+	var loaderOnLaunch = false;
 	/*
 		DEFAULT SERIAL PORT
 		Choose default serial port to set the connection port when loader is not used.
@@ -27,7 +27,7 @@
 		relaunching. It's set to false by default because it blocks Arduino sketch upload process.
 		Changes from chrome apps to node-webkit made this currently not working (?).
 	*/
-	var defaultSerialPort = "COM4";
+	var defaultSerialPort = "COM7";
 	var isPersistent = false;
 	/*
 		BLUETOOTH DEFAULT ADDRESS

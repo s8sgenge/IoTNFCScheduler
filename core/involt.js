@@ -352,3 +352,22 @@ if(involt.isMobile) {
 else{
 	involt.launch();
 };
+
+
+
+/**
+ * our functions
+ */
+
+ //change language
+involt.involtListenForPin[0] = function(index, value){
+	//do something when received value from pin A0...
+	restyleLanguage(value);
+}
+
+//logout 
+involt.involtListenForPin[1] = function(index, value){
+	document.getElementsByName('involtApp')[0].contentWindow.location.href ="www/employee.html";
+}
+
+

@@ -76,30 +76,39 @@ function addCard(id, title, description, n) {
   document.getElementById(id).appendChild(card);  // append card to id
 }
 
-function restyleLanguage(language) {
-  let france = document.getElementById("fr");
-  let english = document.getElementById("en");
-  let german = document.getElementById("de");
-  switch (language) {
-    case 'en':
-      france.setAttribute("style", "outline:none;height:80px;");
-      english.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
-      german.setAttribute("style", "outline:none;height:80px;");
-      break;
-
-    case 'de':
-      france.setAttribute("style", "outline:none;height:80px;");
-      english.setAttribute("style", "outline:none;height:80px;");
-      german.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
-      break;
-
-    case 'fr':
-      france.setAttribute("style", "outline:none;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
-      english.setAttribute("style", "outline:none;height:80px;");
-      german.setAttribute("style", "outline:none;height:80px;");
-      break;
+ function restyleLanguage(value){
+  let france = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('fr')
+  let english = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('en');
+	let german = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('de');
+	
+	switch (value) {
+	  //english
+	  case 0:
+		france.setAttribute("style", "outline:none;height:80px;");
+		english.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
+    german.setAttribute("style", "outline:none;height:80px;");
+    language = 'en';
+		break;
+	  //german
+	  case 1:
+		france.setAttribute("style", "outline:none;height:80px;");
+		english.setAttribute("style", "outline:none;height:80px;");
+		german.setAttribute("style", "outline:none;height:100px;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
+    language = 'de';
+    break;
+	  //french
+	  case 2:
+		france.setAttribute("style", "outline:none;filter: drop-shadow(0 0 0.75rem crimson); height:100px;");
+		english.setAttribute("style", "outline:none;height:80px;");
+    german.setAttribute("style", "outline:none;height:80px;");
+    language = 'fr';
+		break;
   }
-}
+
+  $('.lang').each(function (index, element) {
+    $(this).text(arrLang[language][$(this).attr('key')]);
+  });
+	};
 
 
 
