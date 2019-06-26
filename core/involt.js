@@ -370,4 +370,15 @@ involt.involtListenForPin[1] = function(index, value){
 	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/app.html";
 }
 
+//student
+involt.involtListenForPin[2] = function(index, value){
+	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/student.html";
+}
+
+//employee
+involt.involtListenForPin[3] = function(index, value){
+	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/employee.html";
+}
+
+
 

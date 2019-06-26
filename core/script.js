@@ -76,6 +76,7 @@ function addCard(id, title, description, n) {
   document.getElementById(id).appendChild(card);  // append card to id
 }
 
+
 function restyleLanguage(value){
   let france = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('fr')
   let english = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('en');
@@ -107,7 +108,9 @@ function restyleLanguage(value){
   translate(lang);
 };
 
-// JQuery website translation
+/**
+ *  JQuery website translation
+ * */ 
 function translate(l) {
   let lang = l;
   let app = document.getElementsByName('involtApp')[0].contentWindow;
