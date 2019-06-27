@@ -1,3 +1,23 @@
+//stores the schedules in the local storage
+function assignSchedule(s, p){
+  localStorage.setItem('sd',s);
+  localStorage.setItem('pd',p);
+}
+
+function buildDumb(){
+  // localStorage stores the list of lists as one string. 
+  // TODO: parse the input to lists!!!!!!!!!!!
+
+  /*let sd = localStorage.getItem('sd'); 
+  let pd = localStorage.getItem('pd');
+  buildSite(sd,pd,document);*/
+
+//now only for testing:
+  let sd = [["SpublicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["SpublicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["SpublicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
+  let pd = [["studentSchedule", "12:15 - 13:45 Interactive Systems ", "By: Prof. Krüger In: E1.3 HS01"], ["studentSchedule", "14:15 - 15:45 Informationssysteme", "By: Prof. Dietrich In: GHH"], ["studentSchedule", "16:15 - 17:45 Nebenläufige Programmierung", "By: Prof. Hermanns In: E1.3 HS02"]];
+	buildSite(sd,pd,document);
+}
+
 function getTime() {
   let today = new Date();
   let h = today.getHours();
@@ -73,10 +93,14 @@ function addCard(id, title, description, n) {
   card.appendChild(cardHeader);                   // put header in card
   cardBody.appendChild(addInfo);                  // put description in card-body
   card.appendChild(cardBody);                     // put body in card
-  document.getElementById(id).appendChild(card);  // append card to id
+  this.document.getElementById(id).appendChild(card);  // append card to id
 }
 
-
+/**
+ * restyle and translates the page
+ * called in involt.js by arduino
+ * @param {*} value --> language 0:english , 1:german, 2:french
+ */
 function restyleLanguage(value){
   let france = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('fr')
   let english = document.getElementsByName('involtApp')[0].contentWindow.document.getElementById('en');
@@ -120,7 +144,11 @@ function translate(l) {
 }
 
 
-
+/**
+ * 
+ * @param {*} schedule 
+ * @param {*} publications 
+ */
 function buildSite(schedule, publications) {
   let id;
   let title;
@@ -149,7 +177,7 @@ let arrLang = {
     'publications': 'Recent Publications',
     'useCard': 'You can use your UDS-Card to get additional information!',
     'employeeSchedule': 'Today\'s schedule',
-    'studentSchedule': 'Today\'s lectures'
+    'lec': 'Today\'s lectures'
   },
   'de': {
     'welcome': 'Willkommen am',
@@ -157,7 +185,7 @@ let arrLang = {
     'publications': 'Aktuelle Veröffentlichungen',
     'useCard': 'Mit Ihrer UDS-Karte können Sie zusätzliche Informationen erhalten!',
     'employeeSchedule': 'Heutiger Tagesablauf',
-    'studentSchedule': 'Heutige Vorlesungen'
+    'lec': 'Heutige Vorlesungen'
   },
   'fr': {
     'welcome': 'Bienvenue à',
@@ -165,6 +193,6 @@ let arrLang = {
     'publications': 'Publications récentes',
     'useCard': 'Vous pouvez utiliser votre UDS-Card pour obtenir des informations supplémentaires!',
     'employeeSchedule': 'Horaire actuel',
-    'studentSchedule': 'Cours d\'aujourd\'hui'
+    'lec': 'Cours d\'aujourd\'hui'
   }
 };

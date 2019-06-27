@@ -17,6 +17,8 @@
   <script src="settings.js"></script>
   <script src="core/bridge.js"></script>
   <script src="core/framework.js"></script>
+  <script src="core/involt.js"></script>
+
   <link rel="stylesheet" type="text/css"  href="css/style.css">
   <title>IoT NFC Scheduler</title>
   <meta charset="utf-8">
@@ -28,8 +30,13 @@
 </head>
 
 
-<body onload="getDate(), getDay(), getTime(), getDate2(), buildSite(scheduleData, publicationsData)">
-  <div class="header">
+<body onload="getDate(), getDay(), getTime(), getDate2(), buildSite(scheduleData, publicationsData, document)">
+  
+  <!--             TEST BUTTON                    -->
+  <input id="clickMe" type="button" value="clickme" onclick="fuc();" />
+  
+
+   <div class="header">
     <div class="row">
       <div class="col-4">
       </div>

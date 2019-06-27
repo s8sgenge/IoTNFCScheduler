@@ -369,15 +369,33 @@ involt.involtListenForPin[0] = function(index, value){
 involt.involtListenForPin[1] = function(index, value){
 	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/app.html";
 }
-
+let a = 0;
 //student
 involt.involtListenForPin[2] = function(index, value){
-	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/student.html";
+	let sd = [["SpublicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["SpublicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["SpublicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
+  	let pd = [["studentSchedule", "12:15 - 13:45 Interactive Systems ", "By: Prof. Krüger In: E1.3 HS01"], ["studentSchedule", "14:15 - 15:45 Informationssysteme", "By: Prof. Dietrich In: GHH"], ["studentSchedule", "16:15 - 17:45 Nebenläufige Programmierung", "By: Prof. Hermanns In: E1.3 HS02"]];
+	document.getElementsByName('involtApp')[0].contentWindow.location.href = "/www/student.html";
+	//document.getElementsByName('involtApp')[0].contentWindow.location.replace("/www/student.html");
+	if(a == 0){
+	buildSite(sd, pd,  document.getElementsByName('involtApp')[0].contentWindow.document);
+	a = 1;
+	}
+	//document.getElementsByName('involtApp')[0].contentWindow.location.reload();
+
+}
+
+function fuc(){
+	/*let sd = [["SpublicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["SpublicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["SpublicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
+  	let pd = [["studentSchedule", "12:15 - 13:45 Interactive Systems ", "By: Prof. Krüger In: E1.3 HS01"], ["studentSchedule", "14:15 - 15:45 Informationssysteme", "By: Prof. Dietrich In: GHH"], ["studentSchedule", "16:15 - 17:45 Nebenläufige Programmierung", "By: Prof. Hermanns In: E1.3 HS02"]];
+	assignSchedule(sd,pd);
+	*/
+	document.location.href ="./student.html";
 }
 
 //employee
 involt.involtListenForPin[3] = function(index, value){
 	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/employee.html";
+	
 }
 
 

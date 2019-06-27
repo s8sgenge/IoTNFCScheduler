@@ -3,7 +3,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <script src="core/script.js"></script>
-<script src="core/jquery/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <html lang="en">
@@ -15,12 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<script>
-  let scheduleData = [["publicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["publicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["publicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
-  let publicationsData = [["studentSchedule", "12:15 - 13:45 Interactive Systems ", "By: Prof. Krüger In: E1.3 HS01"], ["studentSchedule", "14:15 - 15:45 Informationssysteme", "By: Prof. Dietrich In: GHH"], ["studentSchedule", "16:15 - 17:45 Nebenläufige Programmierung", "By: Prof. Hermanns In: E1.3 HS02"]];
-</script>
 
-<body onload="getDate(), getDay(), getTime(), getDate2(),buildSite(scheduleData, publicationsData)">
+<body onload="getDate(), getDay(), getTime(), getDate2(), buildDumb()">
   <div class="header">
     <div class="row">
       <div class="col-4">
@@ -33,12 +28,9 @@
       </div>
       <div class="col-4" style="padding: 50px">
         <div class="languages">
-          <input type="image" onclick="resizeDE()" value="Click" class="translate" id="de" style="height:80px"
-            src="img/german.png" />
-          <input type="image" onclick="resizeFR()" value="Click" class="translate" id="fr" style="height:80px"
-            src="img/french.png" />
-          <input type="image" onclick="resizeEN()" value="Click" class="translate" id="en" style="height:100px"
-            src="img/english.png" />
+          <img src="img/german.png" class="translate" id="de" style="outline:none;height:80px;outline:none;">
+          <img src="img/french.png" class="translate" id="fr" style="outline:none;height:80px;outline:none;">
+          <img src="img/english.png" class="translate" id="en" style="outline:none;height:100px;outline:none; filter: drop-shadow(0 0 0.75rem crimson);">
         </div>
       </div>
     </div>
@@ -51,7 +43,7 @@
         <p><strong><span id="day"></span>: <span id="date2"></span></strong>
       </h2>
       </p>
-      <div id="publicSchedule">
+      <div id="SpublicSchedule">
       </div>
     </div>
 
@@ -59,7 +51,7 @@
     <!--Right column: Student Schedule-->
     <div class="col-6" style="padding-right: 40px">
       <h2>
-        <p><strong class="lang" key="studentSchedule">Today's lectures</strong></p>
+        <p><strong class="lang" key="lec">Today's lectures</strong></p>
       </h2>
 
       <div id="studentSchedule">
