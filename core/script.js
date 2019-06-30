@@ -38,28 +38,28 @@ function getDate2() {
   document.getElementById("date2").innerHTML = dt.toLocaleDateString();
 }
 
-//stores the schedules in the local storage
+/**
+ * stores the schedules in the local storage 
+ * */
 function assignSchedule(s, p) {
   localStorage.setItem('sd', s);
   localStorage.setItem('pd', p);
 }
+
+/**
+ * load the schedules, parses it and build the page
+ */
 function buildDumb() {
-  // localStorage stores the list of lists as one string. 
-  // TODO: parse the input to lists!!!!!!!!!!!
-
-  /*let sd = localStorage.getItem('sd'); 
+  let sd = localStorage.getItem('sd'); 
   let pd = localStorage.getItem('pd');
-  buildSite(sd,pd,document);*/
-
-  //now only for testing:
-  let sd = [["SpublicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["SpublicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["SpublicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
-  let pd = [["studentSchedule", "12:15 - 13:45 Interactive Systems ", "By: Prof. Krüger In: E1.3 HS01"], ["studentSchedule", "14:15 - 15:45 Informationssysteme", "By: Prof. Dietrich In: GHH"], ["studentSchedule", "16:15 - 17:45 Nebenläufige Programmierung", "By: Prof. Hermanns In: E1.3 HS02"]];
-  buildSite(sd, pd, document);
+  sd = parseString(sd);
+  pd = parseString(pd);
+  buildSite(sd,pd,document);
 }
 
-
-// test string: "SpublicSchedule;10:15 - 11:15 Presentation;Beschreibung;SpublicSchedule;12:15 - 13:45 Talk;Beschreibung;SpublicSchedule;15:15 - 17:15 Meeting;Beschreibung"
-
+/**
+ * parse the schedules
+ */
 function parseString(str) {
   let words = str.split(';');  //split input on semicolon ';'
   let data = new Array();
@@ -75,9 +75,7 @@ function parseString(str) {
 }
 
 /**
- * 
- * @param {*} schedule 
- * @param {*} publications 
+ * build the page with the given schedules and publications
  */
 function buildSite(schedule, publications) {
   let id;
