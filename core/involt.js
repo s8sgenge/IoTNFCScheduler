@@ -370,32 +370,29 @@ involt.involtListenForPin[1] = function(index, value){
 	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/app.html";
 }
 
+
+//start
+involt.involtListenForPin[4] = function(index, value){
+	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/start.html";
+	
+}
+
 //student
 involt.involtListenForPin[2] = function(index, value){
-	let sd = "SpublicSchedule;10:15 - 11:15 Presentation;Beschreibung;SpublicSchedule;12:15 - 13:45 Talk;Beschreibung;SpublicSchedule;15:15 - 17:15 Meeting;Beschreibung";
-	let pd = "studentSchedule;12:15 - 13:45 Interactive Systems;By: Prof. Krüger In: E1.3 HS01;studentSchedule;14:15 - 15:45 Informationssysteme;By: Prof. Dietrich In: GHH;studentSchedule;16:15 - 17:45 Nebenläufige Programmierung;By: Prof. Hermanns In: E1.3 HS02";
-	assignSchedule(sd,pd);
+	let schedule = value.split("*");
+	assignSchedule(schedule[0],schedule[1]);
 	document.getElementsByName('involtApp')[0].contentWindow.location.href = "/www/student.html";
 }
 
+
 //employee
 involt.involtListenForPin[3] = function(index, value){
-	let sd = "publicSchedule;10:15 - 11:15 Presentation;Beschreibung;publicSchedule;12:15 - 13:45 Talk;Beschreibung;publicSchedule;15:15 - 17:15 Meeting;Beschreibung";
-  	let pd = "employeeSchedule;10:00 - 13:00 Artificial Intelligence Conference;By: Prof. Mustermann In: Conference room 7;employeeSchedule;14:15 - 15:15 Meeting with PhD Student;With: Max Mustermann In: My office;employeeSchedule;17:00 Project Deadline;Description: Interactive Systems: students must hand in project till 17:00";
-	assignSchedule(sd,pd);
+	let schedule = value.split("*");
+	assignSchedule(schedule[0],schedule[1]);
 	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/employee.html";
 	
 }
 
-/**
- * test function for the button
- */
-function fuc(){
-	let sd = "publicSchedule;10:15 - 11:15 Presentation;Beschreibung;publicSchedule;12:15 - 13:45 Talk;Beschreibung;publicSchedule;15:15 - 17:15 Meeting;Beschreibung";
-	let pd = "employeeSchedule;10:00 - 13:00 Artificial Intelligence Conference;By: Prof. Mustermann In: Conference room 7;employeeSchedule;14:15 - 15:15 Meeting with PhD Student;With: Max Mustermann In: My office;employeeSchedule;17:00 Project Deadline;Description: Interactive Systems: students must hand in project till 17:00";
-    assignSchedule(sd,pd);
-	document.location.href ="./employee.html";
-}
 
 
 
