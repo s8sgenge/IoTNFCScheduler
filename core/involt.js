@@ -369,8 +369,10 @@ involt.involtListenForPin[0] = function(index, value){
 involt.involtListenForPin[1] = function(index, value){
 	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/app.html";
 }
-
-
+/*
+sd = "publicSchedule;10:15 - 11:15 Presentation;Beschreibung;publicSchedule;12:15 - 13:45 Talk;Beschreibung;publicSchedule;15:15 - 17:15 MeetingBeschreibung";
+pd = "recentPublications;INTEGRATING HETEROGENEOUS SOURCES FOR PREDICTING QUESTION TEMPORAL ANCHORS ACROSS YAHOO! ANSWERS;Alejandro Figueroa, Carlos Gómez-Pantoja, Günter Neumann;recentPublications;VIRTUAL-REALITY-SHOPPING UND ONLINESHOPPING IM VERGLEICH HINSICHTLICH USABILITY UND EINPRÄGSAMKEIT;Alexander Hart, Markus Langer, Marco Speicher, Cornelius J König;recentPublications;ADVANCED SIMILARITY MEASURES USING WORD EMBEDDINGS AND SIAMESE NETWORKS IN CBR;Kareem Amin, George Lancaster, Stelios Kapetanakis, Klaus-Dieter Althoff, Andreas Dengel, Miltos Petridis";
+*/
 //start
 involt.involtListenForPin[4] = function(index, value){
 	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/start.html";
@@ -385,6 +387,10 @@ involt.involtListenForPin[2] = function(index, value){
 }
 
 
+/*
+ps = "publicSchedule;10:15 - 11:15 Presentation;cool;SpublicSchedule;12:15 - 13:45 Talk;funny"; 
+es = "employeeSchedule;10:00 - 13:00 Artificial Intelligence Conference;By: Prof. Mustermann In: Conference room 7;employeeSchedule;14:15 - 15:15 Meeting with PhD Student;With: Max Mustermann In: My office;employeeSchedule;17:00 Project Deadline;Description: Interactive Systems: students must hand in project till 17:00";
+*/
 //employee
 involt.involtListenForPin[3] = function(index, value){
 	let schedule = value.split("*");
