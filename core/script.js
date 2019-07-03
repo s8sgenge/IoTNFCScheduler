@@ -50,6 +50,7 @@ function assignSchedule(s, p) {
  * load the schedules, parses it and build the page
  */
 function buildDumb() {
+  debugger;
   let sd = localStorage.getItem('sd'); 
   let pd = localStorage.getItem('pd');
   sd = parseString(sd);

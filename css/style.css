@@ -5,7 +5,7 @@
 
 body {
   margin: 0px;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: scroll;
   padding: 1px;
   background-color: #ffffff;
