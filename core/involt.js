@@ -375,6 +375,8 @@ pd = "recentPublications;INTEGRATING HETEROGENEOUS SOURCES FOR PREDICTING QUESTI
 */
 //start
 involt.involtListenForPin[4] = function(index, value){
+	let schedule = value.split("*");
+	assignSchedule(schedule[0],schedule[1]);
 	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/start.html";
 	
 }
