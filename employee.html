@@ -14,18 +14,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<script>
-  let scheduleData = [["publicSchedule", "10:15 - 11:15 Presentation", "Beschreibung"], ["publicSchedule", "12:15 - 13:45 Talk", "Beschreibung"], ["publicSchedule", "15:15 - 17:15 Meeting", "Beschreibung"]];
-  let publicationsData = [["employeeSchedule", "10:00 - 13:00 Artificial Intelligence Conference ", "By: Prof. Mustermann In: Conference room 7"], ["employeeSchedule", "14:15 - 15:15 Meeting with PhD Student", "With: Max Mustermann In: My office"], ["employeeSchedule", "17:00 Project Deadline", "Description: Interactive Systems: students must hand in project till 17:00"]];
-</script>
 
-<body onload="getDate(), getDay('en'), getTime(), getDate2(),buildSite(scheduleData, publicationsData)">
+<body onload="getDate(), getDay(), getTime(), getDate2(), buildDumb()">
   <div class="header">
     <div class="row">
       <div class="col-4">
       </div>
       <div class="col-4">
-        <h1 class="lang" key="welcome">Welcome "Employee"</h1>
+        <h1 class="lang" key="welcome">Welcome at the</h1>
         <img src="img/DFKI_Logo.png" alt="DFKI Logo" width="" height="75">
         <h4 class="lang" key="date">It's the </h4>
         <h4><span id="date"></span>, <span id="time"></span>.</h4>
@@ -47,7 +43,7 @@
         <p><strong><span id="day"></span>: <span id="date2"></span></strong>
       </h2>
       </p>
-      <div id="publicSchedule">
+      <div id="pS">
       </div>
     </div>
 
@@ -57,7 +53,7 @@
       <h2>
         <p><strong class="lang" key="employeeSchedule">Today's schedule</strong></p>
       </h2>
-      <div id="employeeSchedule">
+      <div id="eS">
       </div>
     </div>
   </div>

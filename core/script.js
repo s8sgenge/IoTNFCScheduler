@@ -14,43 +14,17 @@ function checkTime(i) {
   return i;
 }
 
-function getDay(lang) {
-  var d = new Date();
-  var weekday = new Array(7);
-
-  switch (lang) {
-    case 'en':
-        weekday[0] = "Sunday";
-        weekday[1] = "Monday";
-        weekday[2] = "Tuesday";
-        weekday[3] = "Wednesday";
-        weekday[4] = "Thursday";
-        weekday[5] = "Friday";
-        weekday[6] = "Saturday";
-      break;
-  
-    case 'de':
-        weekday[0] = "Sonntag";
-        weekday[1] = "Montag";
-        weekday[2] = "Dienstag";
-        weekday[3] = "Mittwoch";
-        weekday[4] = "Donnerstag";
-        weekday[5] = "Freitag";
-        weekday[6] = "Samstag";
-      break;
-
-    case 'fr':
-        weekday[0] = "Dimanche";
-        weekday[1] = "Lundi";
-        weekday[2] = "Mardi";
-        weekday[3] = "Mercredi";
-        weekday[4] = "Jeudi";
-        weekday[5] = "Vendredi";
-        weekday[6] = "Samedi";
-      break;
-  }
-
-  var n = weekday[d.getDay()];
+function getDay() {
+  let d = new Date();
+  let weekday = new Array(7);
+  weekday[0] = "Sunday";
+  weekday[1] = "Monday";
+  weekday[2] = "Tuesday";
+  weekday[3] = "Wednesday";
+  weekday[4] = "Thursday";
+  weekday[5] = "Friday";
+  weekday[6] = "Saturday";
+  let n = weekday[d.getDay()];
   document.getElementById("day").innerHTML = n;
 }
 
@@ -208,7 +182,6 @@ function translate(l) {
   let app = document.getElementsByName('involtApp')[0].contentWindow;
   app.$('.lang').each(function (index, element) {
     $(this).text(arrLang[lang][$(this).attr('key')]);
-    getDay(lang);
   });
 }
 
