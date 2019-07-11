@@ -370,8 +370,8 @@ involt.involtListenForPin[1] = function(index, value){
 	document.getElementsByName('involtApp')[0].contentWindow.location.href ="/www/app.html";
 }
 /*
-sd = "publicSchedule;10:15 - 11:15 Presentation;Beschreibung;publicSchedule;12:15 - 13:45 Talk;Beschreibung;publicSchedule;15:15 - 17:15 MeetingBeschreibung";
-pd = "recentPublications;INTEGRATING HETEROGENEOUS SOURCES FOR PREDICTING QUESTION TEMPORAL ANCHORS ACROSS YAHOO! ANSWERS;Alejandro Figueroa, Carlos Gómez-Pantoja, Günter Neumann;recentPublications;VIRTUAL-REALITY-SHOPPING UND ONLINESHOPPING IM VERGLEICH HINSICHTLICH USABILITY UND EINPRÄGSAMKEIT;Alexander Hart, Markus Langer, Marco Speicher, Cornelius J König;recentPublications;ADVANCED SIMILARITY MEASURES USING WORD EMBEDDINGS AND SIAMESE NETWORKS IN CBR;Kareem Amin, George Lancaster, Stelios Kapetanakis, Klaus-Dieter Althoff, Andreas Dengel, Miltos Petridis";
+sd = "pS;10:15 - 11:15 Presentation;Beschreibung;pS;12:15 - 13:45 Talk;Beschreibung;pS;15:15 - 17:15 MeetingBeschreibung";
+pd = "rP;INTEGRATING HETEROGENEOUS SOURCES FOR PREDICTING QUESTION TEMPORAL ANCHORS ACROSS YAHOO! ANSWERS;Alejandro Figueroa, Carlos Gómez-Pantoja, Günter Neumann;rP;VIRTUAL-REALITY-SHOPPING UND ONLINESHOPPING IM VERGLEICH HINSICHTLICH USABILITY UND EINPRÄGSAMKEIT;Alexander Hart, Markus Langer, Marco Speicher, Cornelius J König;rP;ADVANCED SIMILARITY MEASURES USING WORD EMBEDDINGS AND SIAMESE NETWORKS IN CBR;Kareem Amin, George Lancaster, Stelios Kapetanakis, Klaus-Dieter Althoff, Andreas Dengel, Miltos Petridis";
 */
 //start
 involt.involtListenForPin[4] = function(index, value){

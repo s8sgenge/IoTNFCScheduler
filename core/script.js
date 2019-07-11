@@ -55,6 +55,7 @@ function buildDumb() {
   let pd = localStorage.getItem('pd');
   sd = parseString(sd);
   pd = parseString(pd);
+  debugger;
   buildSite(sd,pd,document);
 }
 
@@ -118,7 +119,7 @@ function addCard(id, title, description, n) {
       break;
   }
 
-  if (id == "recentPublications") {
+  if (id == "rP") {
     description = "Authors: ".bold() + description;
   }
 
