@@ -14,7 +14,7 @@ function checkTime(i) {
   return i;
 }
 
-function getDay() {
+/*function getDay() {
   let d = new Date();
   let weekday = new Array(7);
   weekday[0] = "Sunday";
@@ -26,7 +26,7 @@ function getDay() {
   weekday[6] = "Saturday";
   let n = weekday[d.getDay()];
   document.getElementById("day").innerHTML = n;
-}
+}*/
 
 function getDate() {
   let dt = new Date();
@@ -190,7 +190,8 @@ let arrLang = {
     'publications': 'Recent Publications',
     'useCard': 'You can use your UDS-Card to get additional information!',
     'employeeSchedule': 'Today\'s schedule',
-    'lec': 'Today\'s lectures'
+    'lec': 'Today\'s lectures',
+    'day': 'Wednesday'
   },
   'de': {
     'welcome': 'Willkommen am',
@@ -198,7 +199,8 @@ let arrLang = {
     'publications': 'Aktuelle Veröffentlichungen',
     'useCard': 'Mit Ihrer UDS-Karte können Sie zusätzliche Informationen erhalten!',
     'employeeSchedule': 'Heutiger Tagesablauf',
-    'lec': 'Heutige Vorlesungen'
+    'lec': 'Heutige Vorlesungen',
+    'day':'Mittwoch'
   },
   'fr': {
     'welcome': 'Bienvenue à',
@@ -206,6 +208,7 @@ let arrLang = {
     'publications': 'Publications récentes',
     'useCard': 'Vous pouvez utiliser votre UDS-Card pour obtenir des informations supplémentaires!',
     'employeeSchedule': 'Horaire actuel',
-    'lec': 'Cours d\'aujourd\'hui'
+    'lec': 'Cours d\'aujourd\'hui',
+    'day': 'Mercredi'
   }
 };
